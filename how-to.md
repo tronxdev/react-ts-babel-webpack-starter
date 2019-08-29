@@ -58,6 +58,7 @@ React with Typescript
 
 # Create a custom VSCode settings
 > mkdir .vscode
+
 > touch .vscode/settings.json
 
 # Add the following configuration to .vscode/settings.json file
@@ -94,6 +95,7 @@ node_modules
 }
 
 > npm run lint
+
 > npm run lint:fix
 
 # Install husky and lint-staged for pre-commit hooks
@@ -243,6 +245,7 @@ module.exports = {
 
 # Test the scripts in terminal
 > npm start
+
 > npm run build
 
 
