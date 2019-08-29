@@ -1,6 +1,8 @@
-React with Typescript
+# Create a new project with Typescript
 
 > npx create-react-app my-app —-typescript
+
+# Install ESLint packages
 
 > npm i -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
