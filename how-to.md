@@ -9,6 +9,7 @@ React with Typescript
 > npm i -D eslint-config-standard eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-promise eslint-plugin-react eslint-plugin-standard
 
 # Put the followings in .eslintrc.json
+```
 {
   "env": {
     "browser": true,
@@ -44,6 +45,7 @@ React with Typescript
     "jsx-quotes": ["error", "prefer-single"]
   }
 }
+```
 
 
 > npx eslint src/*.tsx
@@ -52,9 +54,11 @@ React with Typescript
 > npm i -D prettier-eslint prettier-eslint-cli eslint-config-prettier eslint-plugin-prettier
 
 # Put the following line in .eslintrc.json file
+```
 {
   "extends": ["plugin:prettier/recommended"]
 }
+```
 
 # Create a custom VSCode settings
 > mkdir .vscode
@@ -62,10 +66,12 @@ React with Typescript
 > touch .vscode/settings.json
 
 # Add the following configuration to .vscode/settings.json file
+```
 {
   "editor.formatOnSave": true,
   "prettier.singleQuote": true
 }
+```
 
 # Press CMD+P and type ‘Repload Window’ to enable the custom VSCode settings
 
@@ -73,13 +79,16 @@ React with Typescript
 > touch .eslintignore
 
 # Configure .eslintignore
+```
 dist
 node_modules
+```
 
 # Create .prettierrc file
 > touch .prettierrc
 
 # Configure Prettier in .prettierrc
+```
 {
   "trailingComma": "es5",
   "tabWidth": 2,
@@ -87,12 +96,15 @@ node_modules
   "singleQuote": true,
   "jsxSingleQuote": true
 }
+```
 
 # Update ‘scripts’ in package.json
+```
 "scripts": {
   "lint": "eslint '**/*.{js,ts,tsx}'",
   "lint:fix": "npm run lint -- --fix"
 }
+```
 
 > npm run lint
 
@@ -102,6 +114,7 @@ node_modules
 > npm i -D husky lint-staged
 
 # Add the following lines to package.json
+```
 "husky": {
   "hooks": {
     "pre-commit": "lint-staged"
@@ -113,11 +126,13 @@ node_modules
     "git add"
   ]
 },
+```
 
 # Create tsconfig.json file
 > touch tsconfig.json
 
 # Configure typescript in tsconfig.json file
+```
 {
   "compilerOptions": {
     "outDir": "./dist/",
@@ -141,6 +156,7 @@ node_modules
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }
+```
 
 # Create .babelrc file
 > touch .babelrc
@@ -149,6 +165,7 @@ node_modules
 > npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript
 
 # Configure Babel in .babelrc file
+```
 {
   "presets": [
     "@babel/typescript",
@@ -175,6 +192,7 @@ node_modules
     }
   }
 }
+```
 
 # Install Webpack packages and loaders
 > npm i -D webpack webpack-cli webpack-dev-server html-webpack-plugin css-loader file-loader html-loader style-loader ts-loader
@@ -183,6 +201,7 @@ node_modules
 > touch webpack.config.js
 
 # Configure Webpack with Babel in webpack.config.js file
+```
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -234,14 +253,21 @@ module.exports = {
     port: 3000
   }
 };
+```
 
 # Remove “‘main’: ‘index.js’” and add “‘private’: true” in package.json file
+```
+// "main": "index.js",
+"private": true,
+```
 
 # Add npm scripts for webpack shortcut in package.json file
+```
 "scripts": {
   "start": "webpack-dev-server --mode development --open",
   "build": "webpack --mode production",
 }
+```
 
 # Test the scripts in terminal
 > npm start
