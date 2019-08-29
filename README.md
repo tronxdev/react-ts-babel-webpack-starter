@@ -1,8 +1,8 @@
-# Create a new project with Typescript
+## Create a new project with Typescript
 
 > npx create-react-app my-app —-typescript
 
-# Install ESLint packages
+## Install ESLint packages
 
 > npm i -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
@@ -10,7 +10,7 @@
 
 > npm i -D eslint-config-standard eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-promise eslint-plugin-react eslint-plugin-standard
 
-# Put the followings in .eslintrc.json
+## Put the followings in .eslintrc.json
 
 ```
 {
@@ -52,11 +52,11 @@
 
 > npx eslint src/\*.tsx
 
-# Integrate Prettier with ESLint
+## Integrate Prettier with ESLint
 
 > npm i -D prettier-eslint prettier-eslint-cli eslint-config-prettier eslint-plugin-prettier
 
-# Put the following line in .eslintrc.json file
+## Put the following line in .eslintrc.json file
 
 ```
 {
@@ -64,13 +64,13 @@
 }
 ```
 
-# Create a custom VSCode settings
+## Create a custom VSCode settings
 
 > mkdir .vscode
 
 > touch .vscode/settings.json
 
-# Add the following configuration to .vscode/settings.json file
+## Add the following configuration to .vscode/settings.json file
 
 ```
 {
@@ -79,24 +79,24 @@
 }
 ```
 
-# Press CMD+P and type ‘Repload Window’ to enable the custom VSCode settings
+## Press CMD+P and type ‘Repload Window’ to enable the custom VSCode settings
 
-# Create .eslintignore
+## Create .eslintignore
 
 > touch .eslintignore
 
-# Configure .eslintignore
+## Configure .eslintignore
 
 ```
 dist
 node_modules
 ```
 
-# Create .prettierrc file
+## Create .prettierrc file
 
 > touch .prettierrc
 
-# Configure Prettier in .prettierrc
+## Configure Prettier in .prettierrc
 
 ```
 {
@@ -108,7 +108,7 @@ node_modules
 }
 ```
 
-# Update ‘scripts’ in package.json
+## Update ‘scripts’ in package.json
 
 ```
 "scripts": {
@@ -121,11 +121,11 @@ node_modules
 
 > npm run lint:fix
 
-# Install husky and lint-staged for pre-commit hooks
+## Install husky and lint-staged for pre-commit hooks
 
 > npm i -D husky lint-staged
 
-# Add the following lines to package.json
+## Add the following lines to package.json
 
 ```
 "husky": {
@@ -141,11 +141,11 @@ node_modules
 },
 ```
 
-# Create tsconfig.json file
+## Create tsconfig.json file
 
 > touch tsconfig.json
 
-# Configure typescript in tsconfig.json file
+## Configure typescript in tsconfig.json file
 
 ```
 {
@@ -173,15 +173,15 @@ node_modules
 }
 ```
 
-# Create .babelrc file
+## Create .babelrc file
 
 > touch .babelrc
 
-# Install @babel packages
+## Install @babel packages
 
 > npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript
 
-# Configure Babel in .babelrc file
+## Configure Babel in .babelrc file
 
 ```
 {
@@ -212,15 +212,15 @@ node_modules
 }
 ```
 
-# Install Webpack packages and loaders
+## Install Webpack packages and loaders
 
 > npm i -D webpack webpack-cli webpack-dev-server html-webpack-plugin css-loader file-loader html-loader style-loader ts-loader
 
-# Create webpack.config.js file
+## Create webpack.config.js file
 
 > touch webpack.config.js
 
-# Configure Webpack with Babel in webpack.config.js file
+## Configure Webpack with Babel in webpack.config.js file
 
 ```
 const path = require('path');
@@ -276,14 +276,14 @@ module.exports = {
 };
 ```
 
-# Remove “‘main’: ‘index.js’” and add “‘private’: true” in package.json file
+## Remove “‘main’: ‘index.js’” and add “‘private’: true” in package.json file
 
 ```
 // "main": "index.js",
 "private": true,
 ```
 
-# Add npm scripts for webpack shortcut in package.json file
+## Add npm scripts for webpack shortcut in package.json file
 
 ```
 "scripts": {
@@ -292,7 +292,7 @@ module.exports = {
 }
 ```
 
-# Test the scripts in terminal
+## Test the scripts in terminal
 
 > npm start
 
